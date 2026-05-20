@@ -28,6 +28,7 @@ class Camera
 
     public:
     Camera(float _cameraSpeed, float _mouseSensitivity, float _FOV, float _nearPlane, float _farPlane);
+    ~Camera() = default;
     void ProcessMouse(const float deltaX, const float deltaY);
     void ProcessKeyboard(const glm::vec3 dir, float deltaTime);
     [[GLM_NODISCARD]] glm::mat4 GetViewMatrix() const;
