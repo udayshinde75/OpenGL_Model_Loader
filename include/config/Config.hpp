@@ -1,6 +1,6 @@
 #pragma once
 
-#include <string_view>
+#include <string>
 
 namespace Config
 {
@@ -51,10 +51,10 @@ namespace Config
     // Assets
     namespace Assets
     {
-        inline constexpr const char* ShaderDirectory = "Assets/Shaders/";
+        inline const std::string ShaderDirectory ="Assets/Shaders/";
 
-        inline constexpr const char* TextureDirectory = "Assets/Textures/";
+        inline const std::string TextureDirectory = "assets/textures/";
 
-        inline constexpr const char* ModelDirectory = "Assets/Models/";
+        inline const std::string ModelDirectory = "assets/models/";
     }
 }
