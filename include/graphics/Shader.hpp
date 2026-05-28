@@ -2,7 +2,7 @@
 
 #include <string>
 #include <unordered_map>
-#include <glad/glad.h>
+#include <glad/include/glad/glad.h>
 
 class Shader
 {

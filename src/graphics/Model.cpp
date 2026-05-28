@@ -1,6 +1,6 @@
-#include <Model.hpp>
-#include <Shader.hpp>
-#include <Texture.hpp>
+#include <graphics/Model.hpp>
+#include <graphics/Shader.hpp>
+#include <graphics/Texture.hpp>
 
 #include <iostream>
 

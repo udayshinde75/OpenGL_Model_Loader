@@ -153,6 +153,174 @@ external/glad/src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/external/glad/src/glad.c.s
 .PHONY : external/glad/src/glad.c.s
 
+src/core/Input.o: src/core/Input.cpp.o
+.PHONY : src/core/Input.o
+
+# target to build an object file
+src/core/Input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/core/Input.cpp.o
+.PHONY : src/core/Input.cpp.o
+
+src/core/Input.i: src/core/Input.cpp.i
+.PHONY : src/core/Input.i
+
+# target to preprocess a source file
+src/core/Input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/core/Input.cpp.i
+.PHONY : src/core/Input.cpp.i
+
+src/core/Input.s: src/core/Input.cpp.s
+.PHONY : src/core/Input.s
+
+# target to generate assembly for a file
+src/core/Input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/core/Input.cpp.s
+.PHONY : src/core/Input.cpp.s
+
+src/graphics/Camera.o: src/graphics/Camera.cpp.o
+.PHONY : src/graphics/Camera.o
+
+# target to build an object file
+src/graphics/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Camera.cpp.o
+.PHONY : src/graphics/Camera.cpp.o
+
+src/graphics/Camera.i: src/graphics/Camera.cpp.i
+.PHONY : src/graphics/Camera.i
+
+# target to preprocess a source file
+src/graphics/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Camera.cpp.i
+.PHONY : src/graphics/Camera.cpp.i
+
+src/graphics/Camera.s: src/graphics/Camera.cpp.s
+.PHONY : src/graphics/Camera.s
+
+# target to generate assembly for a file
+src/graphics/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Camera.cpp.s
+.PHONY : src/graphics/Camera.cpp.s
+
+src/graphics/Mesh.o: src/graphics/Mesh.cpp.o
+.PHONY : src/graphics/Mesh.o
+
+# target to build an object file
+src/graphics/Mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Mesh.cpp.o
+.PHONY : src/graphics/Mesh.cpp.o
+
+src/graphics/Mesh.i: src/graphics/Mesh.cpp.i
+.PHONY : src/graphics/Mesh.i
+
+# target to preprocess a source file
+src/graphics/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Mesh.cpp.i
+.PHONY : src/graphics/Mesh.cpp.i
+
+src/graphics/Mesh.s: src/graphics/Mesh.cpp.s
+.PHONY : src/graphics/Mesh.s
+
+# target to generate assembly for a file
+src/graphics/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Mesh.cpp.s
+.PHONY : src/graphics/Mesh.cpp.s
+
+src/graphics/Model.o: src/graphics/Model.cpp.o
+.PHONY : src/graphics/Model.o
+
+# target to build an object file
+src/graphics/Model.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Model.cpp.o
+.PHONY : src/graphics/Model.cpp.o
+
+src/graphics/Model.i: src/graphics/Model.cpp.i
+.PHONY : src/graphics/Model.i
+
+# target to preprocess a source file
+src/graphics/Model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Model.cpp.i
+.PHONY : src/graphics/Model.cpp.i
+
+src/graphics/Model.s: src/graphics/Model.cpp.s
+.PHONY : src/graphics/Model.s
+
+# target to generate assembly for a file
+src/graphics/Model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Model.cpp.s
+.PHONY : src/graphics/Model.cpp.s
+
+src/graphics/Renderer.o: src/graphics/Renderer.cpp.o
+.PHONY : src/graphics/Renderer.o
+
+# target to build an object file
+src/graphics/Renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Renderer.cpp.o
+.PHONY : src/graphics/Renderer.cpp.o
+
+src/graphics/Renderer.i: src/graphics/Renderer.cpp.i
+.PHONY : src/graphics/Renderer.i
+
+# target to preprocess a source file
+src/graphics/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Renderer.cpp.i
+.PHONY : src/graphics/Renderer.cpp.i
+
+src/graphics/Renderer.s: src/graphics/Renderer.cpp.s
+.PHONY : src/graphics/Renderer.s
+
+# target to generate assembly for a file
+src/graphics/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Renderer.cpp.s
+.PHONY : src/graphics/Renderer.cpp.s
+
+src/graphics/Shader.o: src/graphics/Shader.cpp.o
+.PHONY : src/graphics/Shader.o
+
+# target to build an object file
+src/graphics/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Shader.cpp.o
+.PHONY : src/graphics/Shader.cpp.o
+
+src/graphics/Shader.i: src/graphics/Shader.cpp.i
+.PHONY : src/graphics/Shader.i
+
+# target to preprocess a source file
+src/graphics/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Shader.cpp.i
+.PHONY : src/graphics/Shader.cpp.i
+
+src/graphics/Shader.s: src/graphics/Shader.cpp.s
+.PHONY : src/graphics/Shader.s
+
+# target to generate assembly for a file
+src/graphics/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Shader.cpp.s
+.PHONY : src/graphics/Shader.cpp.s
+
+src/graphics/Texture.o: src/graphics/Texture.cpp.o
+.PHONY : src/graphics/Texture.o
+
+# target to build an object file
+src/graphics/Texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Texture.cpp.o
+.PHONY : src/graphics/Texture.cpp.o
+
+src/graphics/Texture.i: src/graphics/Texture.cpp.i
+.PHONY : src/graphics/Texture.i
+
+# target to preprocess a source file
+src/graphics/Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Texture.cpp.i
+.PHONY : src/graphics/Texture.cpp.i
+
+src/graphics/Texture.s: src/graphics/Texture.cpp.s
+.PHONY : src/graphics/Texture.s
+
+# target to generate assembly for a file
+src/graphics/Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/src/graphics/Texture.cpp.s
+.PHONY : src/graphics/Texture.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -189,6 +357,27 @@ help:
 	@echo "... external/glad/src/glad.o"
 	@echo "... external/glad/src/glad.i"
 	@echo "... external/glad/src/glad.s"
+	@echo "... src/core/Input.o"
+	@echo "... src/core/Input.i"
+	@echo "... src/core/Input.s"
+	@echo "... src/graphics/Camera.o"
+	@echo "... src/graphics/Camera.i"
+	@echo "... src/graphics/Camera.s"
+	@echo "... src/graphics/Mesh.o"
+	@echo "... src/graphics/Mesh.i"
+	@echo "... src/graphics/Mesh.s"
+	@echo "... src/graphics/Model.o"
+	@echo "... src/graphics/Model.i"
+	@echo "... src/graphics/Model.s"
+	@echo "... src/graphics/Renderer.o"
+	@echo "... src/graphics/Renderer.i"
+	@echo "... src/graphics/Renderer.s"
+	@echo "... src/graphics/Shader.o"
+	@echo "... src/graphics/Shader.i"
+	@echo "... src/graphics/Shader.s"
+	@echo "... src/graphics/Texture.o"
+	@echo "... src/graphics/Texture.i"
+	@echo "... src/graphics/Texture.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

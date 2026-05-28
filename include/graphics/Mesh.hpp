@@ -1,4 +1,4 @@
-#pragma once;
+#pragma once
 
 #include <string>
 #include <vector>
@@ -49,8 +49,8 @@ public:
 
     void Draw(const Shader& Shader) const;
 
-    [[GLM_NODISCARD]] const std::vector<Vertex>& GetVertices() const;
-    [[GLM_NODISCARD]] const std::vector<unsigned int>& GetIndices() const;
-    [[GLM_NODISCARD]] const std::vector<Texture>& GetTextures() const;
-    [[GLM_NODISCARD]] unsigned int GetVAO() const;
+    const std::vector<Vertex>& GetVertices() const;
+    const std::vector<unsigned int>& GetIndices() const;
+    const std::vector<Texture>& GetTextures() const;
+    unsigned int GetVAO() const;
 };

@@ -85,12 +85,12 @@ clean: CMakeFiles/OpenGLProject.dir/clean
 CMakeFiles/OpenGLProject.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/build/CMakeFiles --progress-num=1,2,3 "Built target OpenGLProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target OpenGLProject"
 .PHONY : CMakeFiles/OpenGLProject.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OpenGLProject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGLProject.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/build/CMakeFiles 0
 .PHONY : CMakeFiles/OpenGLProject.dir/rule
@@ -102,7 +102,7 @@ OpenGLProject: CMakeFiles/OpenGLProject.dir/rule
 # codegen rule for target.
 CMakeFiles/OpenGLProject.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGLProject.dir/build.make CMakeFiles/OpenGLProject.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target OpenGLProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Finished codegen for target OpenGLProject"
 .PHONY : CMakeFiles/OpenGLProject.dir/codegen
 
 # clean rule for target.

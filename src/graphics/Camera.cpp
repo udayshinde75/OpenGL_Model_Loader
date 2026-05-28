@@ -1,4 +1,4 @@
-#include <Camera.hpp>
+#include <graphics/Camera.hpp>
 
 // Constructor
 Camera::Camera(float _cameraSpeed, float _mouseSensitivity, float _FOV, float _nearPlane, float _farPlane)
@@ -34,18 +34,22 @@ void Camera::ProcessMouse(const float deltaX, const float deltaY)
 
 void Camera::ProcessKeyboard(const glm::vec3 dir, float deltatime)
 {
-    position += glm::normalize(dir.x * right + dir.y * glm::vec3(0.0, 1.0f, 0.0f) + dir.z * front) * deltatime * cameraSpeed;
+    // The caller passes a direction vector (e.g. front, -front, right, -right).
+    // Move directly along that vector rather than mixing components.
+    glm::vec3 moveDir = glm::normalize(dir);
+    position += moveDir * deltatime * cameraSpeed;
 }
 
 //Get matrices
-[[GLM_NODISCARD]] glm::mat4 Camera::GetViewMatrix() const
+glm::mat4 Camera::GetViewMatrix() const
 {
     return glm::lookAt(position, position + front, up);
 }
 
-[[GLM_NODISCARD]] glm::mat4 Camera::GetProjectionMatrix(const float aspectRatio) const
+glm::mat4 Camera::GetProjectionMatrix(const float aspectRatio) const
 {
-    return glm::perspective(FOV, aspectRatio, nearPlane, farPlane);
+    // glm::perspective expects the field-of-view in radians.
+    return glm::perspective(glm::radians(FOV), aspectRatio, nearPlane, farPlane);
 }
 
 // Getters and setters
@@ -100,4 +104,9 @@ void Camera::SetCameraNearPlane(float nearPlane)
 void Camera::SetCameraFarPlane(float farPlane)
 {
     this->farPlane = farPlane;
+}
+
+float Camera::GetCameraFov() const
+{
+    return this->FOV;
 }

@@ -1,11 +1,11 @@
-#include "Texture.hpp"
+#include "graphics/Texture.hpp"
 
 #include <iostream>
 
-#include <glad/glad.h>
+#include <glad/include/glad/glad.h>
 
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb_image.h>
+#include <stb/stb_image.h>
 
 unsigned int TextureFromFile(const std::string& path)
 {
@@ -81,6 +81,8 @@ unsigned int TextureFromFile(const std::string& path)
                     GL_LINEAR);
 
     stbi_image_free(data);
+
+    std::cout << "Loaded texture: " << path << " (" << width << "x" << height << ", ch=" << channelCount << ") -> ID=" << textureID << std::endl;
 
     return textureID;
 }

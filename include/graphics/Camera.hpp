@@ -31,8 +31,9 @@ class Camera
     ~Camera() = default;
     void ProcessMouse(const float deltaX, const float deltaY);
     void ProcessKeyboard(const glm::vec3 dir, float deltaTime);
-    [[GLM_NODISCARD]] glm::mat4 GetViewMatrix() const;
-    [[GLM_NODISCARD]] glm::mat4 GetProjectionMatrix(const float aspectRatio) const;
+    glm::mat4 GetViewMatrix() const;
+    glm::mat4 GetProjectionMatrix(const float aspectRatio) const;
+    float GetCameraFov() const;
     glm::vec3 GetCameraPositionVector() const;
     glm::vec3 GetCameraFrontVector() const;
     glm::vec3 GetCameraUpVector() const;

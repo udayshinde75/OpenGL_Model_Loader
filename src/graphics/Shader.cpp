@@ -1,4 +1,4 @@
-#include <Shader.hpp>
+#include <graphics/Shader.hpp>
 
 #include <fstream>
 #include <sstream>
@@ -109,4 +109,44 @@ GLint Shader::GetUniformLocation(const std::string& name) const
     return location;
 }
 
-// Public functions and setters
+// Use shader
+void Shader::Use() const
+{
+    glUseProgram(programID);
+}
+
+// Uniform setters
+void Shader::SetBool(const std::string& name, bool value) const
+{
+    glUniform1i(GetUniformLocation(name), static_cast<int>(value));
+}
+
+void Shader::SetInt(const std::string& name, int value) const
+{
+    glUniform1i(GetUniformLocation(name), value);
+}
+
+void Shader::SetFloat(const std::string& name, float value) const
+{
+    glUniform1f(GetUniformLocation(name), value);
+}
+
+void Shader::SetVec3(const std::string& name,
+                     float x,
+                     float y,
+                     float z) const
+{
+    glUniform3f(GetUniformLocation(name), x, y, z);
+}
+
+void Shader::SetMat4(const std::string& name,
+                     const float* matrix) const
+{
+    glUniformMatrix4fv(
+        GetUniformLocation(name),
+        1,
+        GL_FALSE,
+        matrix
+    );
+}
+

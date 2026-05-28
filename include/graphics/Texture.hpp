@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 unsigned int TextureFromFile(const std::string& path);
 

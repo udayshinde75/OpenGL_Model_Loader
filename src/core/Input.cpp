@@ -1,5 +1,5 @@
-#include "Input.hpp"
-#include "Camera.hpp"
+#include "core/Input.hpp"
+#include "graphics/Camera.hpp"
 
 #include <glfw/glfw3.h>
 
@@ -65,9 +65,12 @@ void Input::ProcessMouse(Camera& camera, double mouseX, double mouseY)
 
 void Input::ProcessScroll(Camera& camera, double offsetY)
 {
-    camera.SetCameraFov(
-        camera.GetProjectionMatrix(1.0f)[0][0]
-    );
+    // Adjust camera FOV by scroll offset and clamp to sensible range.
+    float fov = camera.GetCameraFov();
+    fov -= static_cast<float>(offsetY);
+    if (fov < 1.0f) fov = 1.0f;
+    if (fov > 90.0f) fov = 90.0f;
+    camera.SetCameraFov(fov);
 }
 
 void Input::SetFirstMouse(bool value)

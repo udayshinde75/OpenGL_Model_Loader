@@ -228,6 +228,9 @@ OpenGLProject_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 OpenGLProject_SOURCE_DIR:STATIC=/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader
 
+//The directory containing a CMake configuration file for assimp.
+assimp_DIR:PATH=/opt/homebrew/lib/cmake/assimp-6.0
+
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=/opt/homebrew/lib/cmake/glfw3
 

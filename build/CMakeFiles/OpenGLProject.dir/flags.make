@@ -5,7 +5,7 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/external -isystem /opt/homebrew/include
+C_INCLUDES = -I/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/external -I/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/include -I/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/src -isystem /opt/homebrew/include
 
 C_FLAGSarm64 =  -arch arm64
 
@@ -13,7 +13,7 @@ C_FLAGS =  -arch arm64
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/external -isystem /opt/homebrew/include
+CXX_INCLUDES = -I/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/external -I/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/include -I/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/src -isystem /opt/homebrew/include
 
 CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
 

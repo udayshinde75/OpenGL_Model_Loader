@@ -1,12 +1,12 @@
-#include "Renderer.hpp"
-#include "Model.hpp"
-#include "Shader.hpp"
+#include "graphics/Renderer.hpp"
+#include "graphics/Model.hpp"
+#include "graphics/Shader.hpp"
 
-#include <glad/glad.h>
+#include <glad/include/glad/glad.h>
 
 Renderer::Renderer()
 {
-    EnableDepthTest(true);
+
 }
 
 void Renderer::BeginFrame() const

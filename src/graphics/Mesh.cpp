@@ -1,9 +1,10 @@
-#include "Mesh.hpp"
-#include "Shader.hpp"
+#include "graphics/Mesh.hpp"
+#include "graphics/Shader.hpp"
 
+#include <iostream>
 #include <utility>
 
-#include <glad/glad.h>
+#include <glad/include/glad/glad.h>
 
 
 // Constructor
@@ -130,29 +131,51 @@ void Mesh::SetupMesh()
 // Draw call
 void Mesh::Draw(const Shader& shader) const
 {
+    // Ensure the shader program is active before setting sampler uniforms.
+    shader.Use();
+
     unsigned int diffuseNumber = 1;
     unsigned int specularNumber = 1;
 
+    // Bind textures and set shader sampler uniforms. The project's
+    // fragment shader expects samplers at `material.diffuse` and
+    // `material.specular`, so map the first diffuse/specular textures
+    // accordingly and set a default shininess.
     for (unsigned int i = 0; i < textures.size(); ++i)
     {
         glActiveTexture(GL_TEXTURE0 + i);
 
-        std::string uniformName;
         std::string textureType = textures[i].Type;
+        std::string uniformName;
 
         if (textureType == "texture_diffuse")
         {
-            uniformName = textureType + std::to_string(diffuseNumber++);
+            uniformName = "material.diffuse" + std::to_string(diffuseNumber++);
         }
         else if (textureType == "texture_specular")
         {
-            uniformName = textureType + std::to_string(specularNumber++);
+            uniformName = "material.specular" + std::to_string(specularNumber++);
         }
 
-        shader.SetInt(uniformName, i);
+        if (!uniformName.empty())
+        {
+            shader.SetInt(uniformName, i);
+        }
+
+        if (textures[i].ID == 0)
+        {
+            //std::cout << "Warning: texture " << textures[i].Path << " has ID 0\n";
+        }
+        else
+        {
+            //std::cout << "Binding texture unit " << i << " -> " << uniformName << " (ID=" << textures[i].ID << ")\n";
+        }
 
         glBindTexture(GL_TEXTURE_2D, textures[i].ID);
     }
+
+    // Ensure material shininess is set (default if shader doesn't set it).
+    shader.SetFloat("material.shininess", 32.0f);
 
     glBindVertexArray(VAO);
 

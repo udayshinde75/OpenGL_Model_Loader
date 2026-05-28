@@ -51,7 +51,7 @@ namespace Config
     // Assets
     namespace Assets
     {
-        inline const std::string ShaderDirectory ="Assets/Shaders/";
+        inline const std::string ShaderDirectory ="assets/shaders/";
 
         inline const std::string TextureDirectory = "assets/textures/";
 

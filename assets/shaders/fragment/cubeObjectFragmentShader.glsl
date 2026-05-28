@@ -1,7 +1,7 @@
 #version 410 core
 struct Material {
-    sampler2D diffuse;
-    sampler2D specular;
+    sampler2D diffuse1;
+    sampler2D specular1;
     float shininess;
 };
 
@@ -28,15 +28,15 @@ uniform Light light;
 
 void main()
 {
-    vec3 ambient = light.ambient * vec3(texture(material.diffuse, TexCoords));
+    vec3 ambient = light.ambient * vec3(texture(material.diffuse1, TexCoords));
     vec3 norm = normalize(Normal);
     vec3 lightDir = normalize(light.position - FragPos);
     float diff = max(dot(norm, lightDir), 0.0);
-    vec3 diffuse = light.diffuse * diff * vec3(texture(material.diffuse, TexCoords));
+    vec3 diffuse = light.diffuse * diff * vec3(texture(material.diffuse1, TexCoords));
     vec3 viewDir = normalize(viewPos - FragPos);
     vec3 halfwayDir = normalize(lightDir + viewDir);
     float spec = pow(max(dot(norm, halfwayDir), 0.0), material.shininess);
-    vec3 specularMap = vec3(texture(material.specular, TexCoords));
+    vec3 specularMap = vec3(texture(material.specular1, TexCoords));
     vec3 specular = light.specular * spec * specularMap;
 
     float distance = length(light.position - FragPos);

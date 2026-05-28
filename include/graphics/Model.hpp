@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "Mesh.hpp"
+#include "graphics/Mesh.hpp"
 
 #include <assimp/Importer.hpp>
 #include <assimp/postprocess.h>
@@ -40,7 +40,7 @@ class Model
     Model& operator=(Model&&) noexcept = default;
     void Draw(const Shader& shader) const;
 
-    [[GLM_NODISCARD]] const std::vector<Mesh>& GetMeshes() const;
+    const std::vector<Mesh>& GetMeshes() const;
 };
 
 
