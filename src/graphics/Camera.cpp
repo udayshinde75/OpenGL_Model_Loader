@@ -34,8 +34,6 @@ void Camera::ProcessMouse(const float deltaX, const float deltaY)
 
 void Camera::ProcessKeyboard(const glm::vec3 dir, float deltatime)
 {
-    // The caller passes a direction vector (e.g. front, -front, right, -right).
-    // Move directly along that vector rather than mixing components.
     glm::vec3 moveDir = glm::normalize(dir);
     position += moveDir * deltatime * cameraSpeed;
 }
@@ -48,7 +46,6 @@ glm::mat4 Camera::GetViewMatrix() const
 
 glm::mat4 Camera::GetProjectionMatrix(const float aspectRatio) const
 {
-    // glm::perspective expects the field-of-view in radians.
     return glm::perspective(glm::radians(FOV), aspectRatio, nearPlane, farPlane);
 }
 

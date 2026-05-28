@@ -2,6 +2,7 @@
 
 #include <string>
 
+// In trial, havent used much of it
 namespace Config
 {
     // Window

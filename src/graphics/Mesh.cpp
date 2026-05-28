@@ -137,10 +137,6 @@ void Mesh::Draw(const Shader& shader) const
     unsigned int diffuseNumber = 1;
     unsigned int specularNumber = 1;
 
-    // Bind textures and set shader sampler uniforms. The project's
-    // fragment shader expects samplers at `material.diffuse` and
-    // `material.specular`, so map the first diffuse/specular textures
-    // accordingly and set a default shininess.
     for (unsigned int i = 0; i < textures.size(); ++i)
     {
         glActiveTexture(GL_TEXTURE0 + i);
@@ -174,15 +170,11 @@ void Mesh::Draw(const Shader& shader) const
         glBindTexture(GL_TEXTURE_2D, textures[i].ID);
     }
 
-    // Ensure material shininess is set (default if shader doesn't set it).
     shader.SetFloat("material.shininess", 32.0f);
 
     glBindVertexArray(VAO);
 
-    glDrawElements(GL_TRIANGLES,
-                   static_cast<unsigned int>(indices.size()),
-                   GL_UNSIGNED_INT,
-                   nullptr);
+    glDrawElements(GL_TRIANGLES,static_cast<unsigned int>(indices.size()),GL_UNSIGNED_INT,nullptr);
 
     glBindVertexArray(0);
 

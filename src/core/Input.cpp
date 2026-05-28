@@ -12,34 +12,22 @@ void Input::ProcessKeyboard(GLFWwindow* window, Camera& camera, float deltaTime)
 {
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
     {
-        camera.ProcessKeyboard(
-            camera.GetCameraFrontVector(),
-            deltaTime
-        );
+        camera.ProcessKeyboard(camera.GetCameraFrontVector(),deltaTime);
     }
 
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
     {
-        camera.ProcessKeyboard(
-            -camera.GetCameraFrontVector(),
-            deltaTime
-        );
+        camera.ProcessKeyboard(-camera.GetCameraFrontVector(),deltaTime);
     }
 
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
     {
-        camera.ProcessKeyboard(
-            -camera.GetCameraRightVector(),
-            deltaTime
-        );
+        camera.ProcessKeyboard(-camera.GetCameraRightVector(),deltaTime);
     }
 
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
     {
-        camera.ProcessKeyboard(
-            camera.GetCameraRightVector(),
-            deltaTime
-        );
+        camera.ProcessKeyboard(camera.GetCameraRightVector(),deltaTime);
     }
 }
 
@@ -65,7 +53,6 @@ void Input::ProcessMouse(Camera& camera, double mouseX, double mouseY)
 
 void Input::ProcessScroll(Camera& camera, double offsetY)
 {
-    // Adjust camera FOV by scroll offset and clamp to sensible range.
     float fov = camera.GetCameraFov();
     fov -= static_cast<float>(offsetY);
     if (fov < 1.0f) fov = 1.0f;
