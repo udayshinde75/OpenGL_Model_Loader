@@ -58,7 +58,7 @@ int main()
 
     GLFWmonitor* monitor = glfwGetPrimaryMonitor();
     const GLFWvidmode* mode = glfwGetVideoMode(monitor);
-    GLFWwindow* window = glfwCreateWindow(mode->width, mode->height, "Model Loader", monitor, nullptr);
+    GLFWwindow* window = glfwCreateWindow(mode->width, mode->height, "Model Loader", nullptr, nullptr);
 
     if (!window)
     {
@@ -98,11 +98,11 @@ int main()
     glfwSetInputMode(window,GLFW_CURSOR,GLFW_CURSOR_DISABLED);
 
     Shader modelShader(
-        "/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/assets/shaders/vertex/cubeObjectVertexShader.glsl",
-        "/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/assets/shaders/fragment/cubeObjectFragmentShader.glsl"
+        "assets/shaders/vertex/cubeObjectVertexShader.glsl",
+        "assets/shaders/fragment/cubeObjectFragmentShader.glsl"
     );
 
-    Model backpackModel("/Users/udayshinde/Desktop/OpenGLProjects/OpenGL_Model_Loader/assets/models/backpack/backpack.obj");
+    Model backpackModel("assets/models/backpack/backpack.obj");
 
     glm::vec3 lightPosition(2.0f,0.0f,2.0f);
 
@@ -116,6 +116,13 @@ int main()
         deltaTime = currentFrame - lastFrame;
 
         lastFrame = currentFrame;
+
+        // Prevent crashes when window is minimized
+        if (SCR_WIDTH == 0 || SCR_HEIGHT == 0)
+        {
+            glfwWaitEvents();
+            continue;
+        }
 
         // Calculate and display FPS every second
         fpsTimer += deltaTime;
