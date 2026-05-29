@@ -10,6 +10,13 @@ float Input::lastMouseY = 0.0f;
 
 void Input::ProcessKeyboard(GLFWwindow* window, Camera& camera, float deltaTime)
 {
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS ||
+        glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
+    {
+        glfwSetWindowShouldClose(window, GLFW_TRUE);
+        return;
+    }
+
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
     {
         camera.ProcessKeyboard(camera.GetCameraFrontVector(),deltaTime);
